@@ -5,7 +5,7 @@ from transformers import pipeline
 from transformers import pipeline
 import pandas as pd
 
-newsapi = NewsApiClient(api_key="66a232e334f04f4c80445a3d589a4b2f")
+newsapi = NewsApiClient(api_key="API")
 finbert = pipeline("sentiment-analysis", model="yiyanghkust/finbert-tone", framework="pt")
 
 tickers = pd.read_csv("./data/financial_ratios.csv")["Ticker"].unique()
