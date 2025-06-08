@@ -8,6 +8,7 @@ import urllib.parse
 import numpy as np
 import os
 import IPython
+import matplotlib
 
 
 st.set_page_config(page_title="CRIS – Risk Intelligence Dashboard", page_icon="📊")
