@@ -37,7 +37,6 @@ CRIS (Corporate Risk Intelligence System) is an AI-driven financial risk analysi
 - Python, Pandas, NumPy, Scikit-learn, XGBoost, SHAP  
 - FinBERT (via Hugging Face) for sentiment analysis  
 - Streamlit for web-based dashboard  
-- Jupyter Notebooks for development and experimentation
 
 ---
 
