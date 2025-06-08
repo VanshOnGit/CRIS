@@ -244,9 +244,12 @@ X_filtered = X_df[nonzero_features]
 IPython.get_ipython = lambda: True  
 shap.initjs()
 
-shap.summary_plot(shap_filtered.values, X_filtered, plot_type="bar", show=False)
-fig = plt.gcf()
-st.pyplot(fig)
+matplotlib.use("Agg") 
+
+shap.summary_plot(shap_filtered.values, X_filtered, plot_type="bar")
+st.pyplot(bbox_inches="tight")
+
+
 
 with st.expander("📘 What does this SHAP chart show?"):
     st.markdown("""
