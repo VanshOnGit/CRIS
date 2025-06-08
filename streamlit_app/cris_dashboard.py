@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import urllib.parse
 import numpy as np
+import os
+
 
 st.set_page_config(page_title="CRIS – Risk Intelligence Dashboard", page_icon="📊")
 
@@ -15,8 +17,6 @@ with open("last_update.txt", "r", encoding="utf-16") as f:
 
 # --- Load data and model ---
 @st.cache_data
-import os
-
 def load_data():
     return pd.read_csv(os.path.join(os.path.dirname(__file__), "combined_data.csv"))
 
