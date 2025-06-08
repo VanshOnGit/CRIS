@@ -16,11 +16,11 @@ with open("last_update.txt", "r", encoding="utf-16") as f:
 # --- Load data and model ---
 @st.cache_data
 def load_data():
-    return pd.read_csv("../data/combined_data.csv")
+    return pd.read_csv("combined_data.csv")
 
 @st.cache_resource
 def load_model():
-    return joblib.load("../models/cris_model_78.pkl")
+    return joblib.load("cris_model_78.pkl")
 
 df = load_data()
 model = load_model()
