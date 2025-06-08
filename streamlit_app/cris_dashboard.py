@@ -18,7 +18,8 @@ with open("last_update.txt", "r", encoding="utf-16") as f:
 # --- Load data and model ---
 @st.cache_data
 def load_data():
-    return pd.read_csv(os.path.join(os.path.dirname(__file__), "combined_data.csv"))
+    return joblib.load(os.path.join(os.path.dirname(__file__), "cris_model_78.pkl"))
+
 
 
 @st.cache_resource
