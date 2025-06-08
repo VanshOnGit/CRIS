@@ -7,6 +7,7 @@ import numpy as np
 import urllib.parse
 import numpy as np
 import os
+import IPython
 
 
 st.set_page_config(page_title="CRIS – Risk Intelligence Dashboard", page_icon="📊")
@@ -239,7 +240,10 @@ nonzero_features = mean_shap[mean_shap > 0].index.tolist()
 shap_filtered = shap_df[nonzero_features]
 X_filtered = X_df[nonzero_features]
 
+
+IPython.get_ipython = lambda: True  
 shap.initjs()
+
 shap.summary_plot(shap_filtered.values, X_filtered, plot_type="bar", show=False)
 fig = plt.gcf()
 st.pyplot(fig)
