@@ -13,7 +13,7 @@ import matplotlib
 
 st.set_page_config(page_title="CRIS – Risk Intelligence Dashboard", page_icon="📊")
 
-with open("last_update.txt", "r", encoding="utf-16") as f:
+with open(os.path.join(os.path.dirname(__file__), "last_update.txt"), "r", encoding="utf-8") as f:
     last_update_text = f.read().strip()
 
 
