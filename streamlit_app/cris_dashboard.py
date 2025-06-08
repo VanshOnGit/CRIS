@@ -32,7 +32,8 @@ model = load_model()
 # --- Logo & Title ---
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    st.image("logo.png", width=520)
+    st.image(os.path.join(os.path.dirname(__file__), "logo.png"), width=520)
+
 st.markdown("<h1 style='white-space: nowrap;'>Corporate Risk Intelligence System (CRIS)</h1>", unsafe_allow_html=True)
 
 st.markdown("""
