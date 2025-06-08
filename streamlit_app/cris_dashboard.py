@@ -15,8 +15,11 @@ with open("last_update.txt", "r", encoding="utf-16") as f:
 
 # --- Load data and model ---
 @st.cache_data
+import os
+
 def load_data():
-    return pd.read_csv("combined_data.csv")
+    return pd.read_csv(os.path.join(os.path.dirname(__file__), "combined_data.csv"))
+
 
 @st.cache_resource
 def load_model():
