@@ -1,4 +1,6 @@
-# CRIS – Corporate Risk Intelligence System
+<p align="center">
+  <img src="streamlit_app/logo.png" alt="ContraSage Logo" width="700"/>
+</p>
 
 **Deployed App:** [https://cris-vansh.streamlit.app/](https://cris-vansh.streamlit.app/)
 
